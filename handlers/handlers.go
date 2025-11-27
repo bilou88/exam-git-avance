@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"html/template"
 	"net/http"
 	"strconv"
     "main/data"
@@ -41,4 +40,8 @@ func BookHandler(w http.ResponseWriter, r *http.Request) {
 
     tmpl := template.Must(template.ParseFiles("templates/book.html"))
     tmpl.Execute(w, selected)
+}
+
+func ContactHandler(w http.ResponseWriter, r *http.Request) {
+    return
 }
