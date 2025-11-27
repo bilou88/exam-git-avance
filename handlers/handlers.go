@@ -2,12 +2,17 @@ package handlers
 
 import (
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"net/http"
 	"strconv"
 =======
 	"html/template"
 	"net/http"
 >>>>>>> templates/contact
+=======
+	"html/template"
+	"net/http"
+>>>>>>> templates/home
     "main/data"
 )
 
@@ -17,6 +22,7 @@ var books = []data.Book{
     {3, "The Pragmatic Programmer", "Andrew Hunt", 1999},
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 func BookHandler(w http.ResponseWriter, r *http.Request) {
     idStr := r.URL.Query().Get("id")
@@ -57,3 +63,9 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
     tmpl.Execute(w, nil)
 }
 >>>>>>> templates/contact
+=======
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
+    tmpl := template.Must(template.ParseFiles("templates/home.html"))
+    tmpl.Execute(w, books)
+}
+>>>>>>> templates/home
